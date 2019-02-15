@@ -18,6 +18,7 @@ class Product:
         self.identifier = identifier
 
     def stealability(self):
+        """Define stealability."""
         if self.price / self.weight < 0.5:
             return "Not so stealable..."
         elif self.price / self.weight < 1.0:
@@ -26,6 +27,7 @@ class Product:
             return "Very stealable!"
 
     def explode(self):
+        """Define explode"""
         coeff = self.flammability * self.weight
         if coeff < 10:
             return "...fizzle."
@@ -45,6 +47,7 @@ class BoxingGlove(Product):
         return "...it's a glove."
 
     def punch(self):
+        """ define punch"""
         if self.weight < 5:
             return "That tickles."
         elif self.weight < 15:
